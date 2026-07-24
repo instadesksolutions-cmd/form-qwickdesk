@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Brief & Onboarding | QwickDesk Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="QwickDesk Logo" style="height: 40px; vertical-align: middle; margin-right: 10px;" onerror="this.style.display='none'">
+            QwickDesk<span>.</span>
+        </div>
+        <div class="nav-menu">
+            <ul class="nav-links">
+                <li><a href="https://qwickdesksolutions.co.in">Home</a></li>
+                <li><a href="https://qwickdesksolutions.co.in/services.html">Our Expertise</a></li>
+                <li><a href="https://qwickdesksolutions.co.in/pricing.html">Pricing</a></li>
+                <li><a href="#" class="active">Onboarding Form</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="https://wa.me/919920048859" class="btn btn-primary" target="_blank"><i class="fab fa-whatsapp"></i> Quick Help</a>
+                <div class="hamburger"><i class="fas fa-bars"></i></div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="form-section">
+        <div class="form-container reveal">
+            <div class="form-header">
+                <span class="badge">QwickDesk Secure Intake</span>
+                <h1 class="text-gradient">Let's Build Your Digital Asset</h1>
+                <p>Provide your business specifics below. Once submitted, details will be dispatched directly to our core engineering desk.</p>
+            </div>
+
+            <!-- Form configured for direct email dispatch to qwickdesksolutions@outlook.com via AJAX -->
+            <form id="projectForm">
+                
+                <!-- Hidden configurations for FormSubmit -->
+                <input type="hidden" name="_subject" value="New Project Onboarding Submission - QwickDesk">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
+
+                <!-- Section 1: Contact Information -->
+                <div class="form-section-title"><i class="fas fa-user-circle"></i> 1. Contact Information</div>
+                
+                <div class="form-grid-2">
+                    <div class="form-group">
+                        <label for="fullname">Full Name *</label>
+                        <input type="text" id="fullname" name="Full Name" class="form-control" placeholder="e.g. Rajesh Sharma" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Mobile Number (WhatsApp) *</label>
+                        <input type="tel" id="phone" name="Mobile Number" class="form-control" placeholder="+91 99200 48859" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="Email Address" class="form-control" placeholder="rajesh@business.com" required>
+                </div>
+
+                <!-- Section 2: Business Profile -->
+                <div class="form-section-title" style="margin-top: 35px;"><i class="fas fa-store"></i> 2. Business Profile & Niche</div>
+
+                <div class="form-group">
+                    <label for="businessName">Business / Brand Name *</label>
+                    <input type="text" id="businessName" name="Business Name" class="form-control" placeholder="e.g. Sharma Enterprise / Luxury Salon" required>
+                </div>
+
+                <div class="form-grid-2">
+                    <div class="form-group">
+                        <label for="mainCategory">Primary Business Category *</label>
+                        <select id="mainCategory" name="Main Category" class="form-control" required>
+                            <option value="" disabled selected>Select Category</option>
+                            <option value="Manufacturer">Manufacturer</option>
+                            <option value="Services">Services / Consultancy</option>
+                            <option value="Distributor">Distributor / Wholesaler</option>
+                            <option value="Retail">Retail Store</option>
+                            <option value="Other">Other Businesses (Salon, Cafe, etc.)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subCategory">Sub-Category / Specialization *</label>
+                        <select id="subCategory" name="Sub Category" class="form-control" required>
+                            <option value="" disabled selected>First select a category above</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Section 3: Location & Digital Presence -->
+                <div class="form-section-title" style="margin-top: 35px;"><i class="fas fa-map-marked-alt"></i> 3. Location & Assets</div>
+
+                <div class="form-group">
+                    <label for="address">Complete Business Address / Location *</label>
+                    <textarea id="address" name="Business Address" class="form-control" rows="2" placeholder="Shop No, Building, Street, City, Pincode" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Do you have an active Google My Business (GMB) listing? *</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="GMB Status" value="Yes, Active" required> Yes, it's active
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="GMB Status" value="Needs Setup/Optimization"> No, need help setting it up
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="GMB Status" value="Not Sure"> Not sure / Don't know
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Section 4: Web Package Choice -->
+                <div class="form-section-title" style="margin-top: 35px;"><i class="fas fa-layer-group"></i> 4. Preferred Web Architecture</div>
+
+                <div class="form-group">
+                    <label for="webPackage">Select Website Scope / Package *</label>
+                    <select id="webPackage" name="Selected Package" class="form-control" required>
+                        <option value="" disabled selected>Choose structure</option>
+                        <option value="Starter Local Presence (Single/Landing Page)">Starter Local Presence (High-converting Landing Page)</option>
+                        <option value="Growth Engine (Multi-page Business Website)">Growth Engine (Multi-page Corporate/Store Website)</option>
+                        <option value="Enterprise Custom Web App / E-Commerce">Enterprise Custom Platform / E-Commerce Solution</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="notes">Additional Requirements or References (Optional)</label>
+                    <textarea id="notes" name="Additional Notes" class="form-control" rows="3" placeholder="Mention any specific features, color preference, or competitor website links..."></textarea>
+                </div>
+
+                <button type="submit" id="submitBtn" class="btn btn-primary submit-btn">
+                    <span>Submit & Send to Mail</span> <i class="fas fa-arrow-right"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Success Dashboard Modal / State Hidden Initially -->
+    <div id="successModal" class="modal-overlay">
+        <div class="modal-card">
+            <div class="success-icon-box">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Successfully Sent to Email!</h2>
+            <p class="modal-sub">Thank you, <span id="clientNameDisplay">User</span>. Your details have been emailed directly to <strong>qwickdesksolutions@outlook.com</strong>.</p>
+            
+            <div class="summary-box">
+                <div class="summary-item"><strong>Business:</strong> <span id="sumBusiness">-</span></div>
+                <div class="summary-item"><strong>Category:</strong> <span id="sumCategory">-</span></div>
+                <div class="summary-item"><strong>Package:</strong> <span id="sumPackage">-</span></div>
+            </div>
+
+            <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 25px;">
+                To share your logo, photos, or documents instantly, you can also handover via WhatsApp with one click.
+            </p>
+
+            <a id="whatsappHandoverBtn" href="#" target="_blank" class="btn btn-whatsapp-large">
+                <i class="fab fa-whatsapp"></i> Send Documents via WhatsApp
+            </a>
+            
+            <button class="modal-close-text" onclick="location.reload()">Submit Another Response</button>
+        </div>
+    </div>
+
+    <a href="https://wa.me/919920048859" class="floating-wa" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    
+    <footer>
+        <h2>QwickDesk Solutions.</h2>
+        <p>&copy; 2026 All Rights Reserved. Advanced Digital Engine.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
